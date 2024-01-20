@@ -21,13 +21,13 @@ module.exports = {
   },
 
   // Base config
-  extends: ["eslint:recommended"],
+  extends: ["eslint:recommended", "prettier"],
 
   overrides: [
     // React
     {
       files: ["**/*.{js,jsx,ts,tsx}"],
-      plugins: ["react", "jsx-a11y"],
+      plugins: ["react", "jsx-a11y", "prettier", "eslint-plugin-react"],
       extends: [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
@@ -80,4 +80,7 @@ module.exports = {
       },
     },
   ],
+  rules: {
+    "prettier/prettier": ["error"],
+  },
 };

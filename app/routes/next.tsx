@@ -1,19 +1,18 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "New Remix App" },
+    { title: "Remix JS Brasil" },
     { name: "description", content: "Welcome to Remix!" },
   ];
 };
 
-export default function Index() {
+export default function Remix() {
   return (
     <>
-      <Link to="/next">
-        <img src="/img/nextjs.png" alt="" />
-      </Link>
+      <div className="bg-black h-screen py-32">
+        <img className="mx-auto " src="/img/rmx.png" alt="" />
+      </div>
     </>
   );
 }
